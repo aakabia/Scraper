@@ -1,0 +1,1032 @@
+[
+    {
+        "teamName": "Atlanta",
+        "teamInjuredPlayer": {
+            "Name": "C. Zeller",
+            "Position": "C",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Personal",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Atlanta",
+        "teamInjuredPlayer": {
+            "Name": "D. Hunter",
+            "Position": "SF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Atlanta",
+        "teamInjuredPlayer": {
+            "Name": "S. Lundy",
+            "Position": "SG",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Atlanta",
+        "teamInjuredPlayer": {
+            "Name": "V. Krejci",
+            "Position": "SF",
+            "lastUpdated": "Tue, Oct 29",
+            "injuryType": "Thigh",
+            "injuryStatus": "Expected to be out until at least Nov 17"
+        }
+    },
+    {
+        "teamName": "Atlanta",
+        "teamInjuredPlayer": {
+            "Name": "K. Bufkin",
+            "Position": "SG",
+            "lastUpdated": "Tue, Oct 29",
+            "injuryType": "Shoulder",
+            "injuryStatus": "Expected to be out until at least Dec 2"
+        }
+    },
+    {
+        "teamName": "Atlanta",
+        "teamInjuredPlayer": {
+            "Name": "B. Bogdanovic",
+            "Position": "SG",
+            "lastUpdated": "Tue, Oct 29",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Dec 2"
+        }
+    },
+    {
+        "teamName": "Boston",
+        "teamInjuredPlayer": {
+            "Name": "J. Brown",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hip",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Boston",
+        "teamInjuredPlayer": {
+            "Name": "K. Porzingis",
+            "Position": "C",
+            "lastUpdated": "Thu, Aug 22",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "Brooklyn",
+        "teamInjuredPlayer": {
+            "Name": "N. Clowney",
+            "Position": "PF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Hip",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Brooklyn",
+        "teamInjuredPlayer": {
+            "Name": "T. Watford",
+            "Position": "PF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Brooklyn",
+        "teamInjuredPlayer": {
+            "Name": "B. Bogdanovic",
+            "Position": "SF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Brooklyn",
+        "teamInjuredPlayer": {
+            "Name": "B. Simmons",
+            "Position": "PG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Back",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Brooklyn",
+        "teamInjuredPlayer": {
+            "Name": "D. Sharpe",
+            "Position": "C",
+            "lastUpdated": "Mon, Oct 7",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Nov 19"
+        }
+    },
+    {
+        "teamName": "Charlotte",
+        "teamInjuredPlayer": {
+            "Name": "N. Richards",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Shoulder",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Charlotte",
+        "teamInjuredPlayer": {
+            "Name": "D. Jeffries",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hand",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Charlotte",
+        "teamInjuredPlayer": {
+            "Name": "B. Miller",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Lower Body",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Charlotte",
+        "teamInjuredPlayer": {
+            "Name": "M. Williams",
+            "Position": "C",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Chicago",
+        "teamInjuredPlayer": {
+            "Name": "J. Giddey",
+            "Position": "PG",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Illness",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Chicago",
+        "teamInjuredPlayer": {
+            "Name": "P. Williams",
+            "Position": "PF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Shoulder",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Chicago",
+        "teamInjuredPlayer": {
+            "Name": "J. Smith",
+            "Position": "PF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Chicago",
+        "teamInjuredPlayer": {
+            "Name": "Z. LaVine",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hip",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Chicago",
+        "teamInjuredPlayer": {
+            "Name": "L. Ball",
+            "Position": "PG",
+            "lastUpdated": "Wed, Oct 30",
+            "injuryType": "Wrist",
+            "injuryStatus": "Expected to be out until at least Nov 11"
+        }
+    },
+    {
+        "teamName": "Cleveland",
+        "teamInjuredPlayer": {
+            "Name": "D. Wade",
+            "Position": "PF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Cleveland",
+        "teamInjuredPlayer": {
+            "Name": "C. LeVert",
+            "Position": "SG",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Cleveland",
+        "teamInjuredPlayer": {
+            "Name": "J. Tyson",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hip",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Cleveland",
+        "teamInjuredPlayer": {
+            "Name": "M. Strus",
+            "Position": "SG",
+            "lastUpdated": "Sat, Oct 19",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "Cleveland",
+        "teamInjuredPlayer": {
+            "Name": "E. Bates",
+            "Position": "SF",
+            "lastUpdated": "Mon, Oct 7",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "Dallas",
+        "teamInjuredPlayer": {
+            "Name": "M. Kleber",
+            "Position": "C",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Dallas",
+        "teamInjuredPlayer": {
+            "Name": "D. Exum",
+            "Position": "SG",
+            "lastUpdated": "Wed, Oct 9",
+            "injuryType": "Wrist",
+            "injuryStatus": "Expected to be out until at least Jan 20"
+        }
+    },
+    {
+        "teamName": "Denver",
+        "teamInjuredPlayer": {
+            "Name": "A. Gordon",
+            "Position": "PF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Denver",
+        "teamInjuredPlayer": {
+            "Name": "J. Murray",
+            "Position": "PG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Concussion",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Denver",
+        "teamInjuredPlayer": {
+            "Name": "V. Cancar",
+            "Position": "SF",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Ankle",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Denver",
+        "teamInjuredPlayer": {
+            "Name": "D. Holmes II",
+            "Position": "PF",
+            "lastUpdated": "Sat, Jul 13",
+            "injuryType": "Achilles",
+            "injuryStatus": "Out for the season"
+        }
+    },
+    {
+        "teamName": "Detroit",
+        "teamInjuredPlayer": {
+            "Name": "B. Klintman",
+            "Position": "PF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Calf",
+            "injuryStatus": "Expected to be out until at least Nov 15"
+        }
+    },
+    {
+        "teamName": "Detroit",
+        "teamInjuredPlayer": {
+            "Name": "A. Thompson",
+            "Position": "SF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 15"
+        }
+    },
+    {
+        "teamName": "Golden St.",
+        "teamInjuredPlayer": {
+            "Name": "D. Melton",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Back",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Golden St.",
+        "teamInjuredPlayer": {
+            "Name": "A. Wiggins",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Back",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Houston",
+        "teamInjuredPlayer": {
+            "Name": "S. Adams",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Indiana",
+        "teamInjuredPlayer": {
+            "Name": "A. Nesmith",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Indiana",
+        "teamInjuredPlayer": {
+            "Name": "A. Nembhard",
+            "Position": "PG",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Knee",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Indiana",
+        "teamInjuredPlayer": {
+            "Name": "I. Jackson",
+            "Position": "C",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Achilles",
+            "injuryStatus": "Out for the season"
+        }
+    },
+    {
+        "teamName": "Indiana",
+        "teamInjuredPlayer": {
+            "Name": "J. Wiseman",
+            "Position": "C",
+            "lastUpdated": "Thu, Oct 24",
+            "injuryType": "Achilles",
+            "injuryStatus": "Out for the season"
+        }
+    },
+    {
+        "teamName": "L.A. Clippers",
+        "teamInjuredPlayer": {
+            "Name": "M. Bamba",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "L.A. Clippers",
+        "teamInjuredPlayer": {
+            "Name": "P. Tucker",
+            "Position": "PF",
+            "lastUpdated": "Wed, Oct 23",
+            "injuryType": "Not Injury Related",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "L.A. Clippers",
+        "teamInjuredPlayer": {
+            "Name": "K. Leonard",
+            "Position": "SF",
+            "lastUpdated": "Wed, Oct 23",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "L.A. Lakers",
+        "teamInjuredPlayer": {
+            "Name": "A. Reaves",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Ankle",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "L.A. Lakers",
+        "teamInjuredPlayer": {
+            "Name": "A. Davis",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hip",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "L.A. Lakers",
+        "teamInjuredPlayer": {
+            "Name": "D. Russell",
+            "Position": "PG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Foot",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "L.A. Lakers",
+        "teamInjuredPlayer": {
+            "Name": "C. Koloko",
+            "Position": "C",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 16"
+        }
+    },
+    {
+        "teamName": "L.A. Lakers",
+        "teamInjuredPlayer": {
+            "Name": "J. Vanderbilt",
+            "Position": "PF",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Nov 16"
+        }
+    },
+    {
+        "teamName": "L.A. Lakers",
+        "teamInjuredPlayer": {
+            "Name": "C. Wood",
+            "Position": "PF",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 16"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "L. Kennard",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "J. Konchar",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Quadriceps",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "C. Spencer",
+            "Position": "PG",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "D. Bane",
+            "Position": "SG",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Oblique",
+            "injuryStatus": "Expected to be out until at least Nov 10"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "V. Williams Jr.",
+            "Position": "SF",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Lower Leg",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "M. Smart",
+            "Position": "PG",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Nov 10"
+        }
+    },
+    {
+        "teamName": "Memphis",
+        "teamInjuredPlayer": {
+            "Name": "G. Jackson",
+            "Position": "PF",
+            "lastUpdated": "Tue, Oct 29",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Jan 3"
+        }
+    },
+    {
+        "teamName": "Miami",
+        "teamInjuredPlayer": {
+            "Name": "J. Jaquez Jr.",
+            "Position": "SF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Milwaukee",
+        "teamInjuredPlayer": {
+            "Name": "G. Antetokounmpo",
+            "Position": "PF",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Hip",
+            "injuryStatus": "Expected to be out until at least Nov 7"
+        }
+    },
+    {
+        "teamName": "Milwaukee",
+        "teamInjuredPlayer": {
+            "Name": "M. Beauchamp",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 7"
+        }
+    },
+    {
+        "teamName": "Milwaukee",
+        "teamInjuredPlayer": {
+            "Name": "K. Middleton",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Nov 7"
+        }
+    },
+    {
+        "teamName": "Milwaukee",
+        "teamInjuredPlayer": {
+            "Name": "P. Connaughton",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hip",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Minnesota",
+        "teamInjuredPlayer": {
+            "Name": "R. Gobert",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Ankle",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "New Orleans",
+        "teamInjuredPlayer": {
+            "Name": "J. Hawkins",
+            "Position": "SG",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Back",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "New Orleans",
+        "teamInjuredPlayer": {
+            "Name": "Z. Williamson",
+            "Position": "PF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "New Orleans",
+        "teamInjuredPlayer": {
+            "Name": "C. McCollum",
+            "Position": "PG",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Thigh",
+            "injuryStatus": "Expected to be out until at least Nov 16"
+        }
+    },
+    {
+        "teamName": "New Orleans",
+        "teamInjuredPlayer": {
+            "Name": "H. Jones",
+            "Position": "SG",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Shoulder",
+            "injuryStatus": "Expected to be out until at least Nov 16"
+        }
+    },
+    {
+        "teamName": "New Orleans",
+        "teamInjuredPlayer": {
+            "Name": "T. Murphy III",
+            "Position": "SF",
+            "lastUpdated": "Thu, Oct 24",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "New Orleans",
+        "teamInjuredPlayer": {
+            "Name": "D. Murray",
+            "Position": "PG",
+            "lastUpdated": "Thu, Oct 24",
+            "injuryType": "Hand",
+            "injuryStatus": "Expected to be out until at least Nov 25"
+        }
+    },
+    {
+        "teamName": "New York",
+        "teamInjuredPlayer": {
+            "Name": "K. McCullar Jr.",
+            "Position": "SG",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Knee",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "New York",
+        "teamInjuredPlayer": {
+            "Name": "C. Payne",
+            "Position": "PG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "New York",
+        "teamInjuredPlayer": {
+            "Name": "P. Achiuwa",
+            "Position": "PF",
+            "lastUpdated": "Sat, Nov 2",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Nov 13"
+        }
+    },
+    {
+        "teamName": "New York",
+        "teamInjuredPlayer": {
+            "Name": "M. Robinson",
+            "Position": "C",
+            "lastUpdated": "Mon, Sep 23",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Dec 1"
+        }
+    },
+    {
+        "teamName": "Oklahoma City",
+        "teamInjuredPlayer": {
+            "Name": "K. Williams",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Oklahoma City",
+        "teamInjuredPlayer": {
+            "Name": "J. Williams",
+            "Position": "PF",
+            "lastUpdated": "Thu, Oct 31",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Dec 3"
+        }
+    },
+    {
+        "teamName": "Oklahoma City",
+        "teamInjuredPlayer": {
+            "Name": "I. Hartenstein",
+            "Position": "C",
+            "lastUpdated": "Thu, Oct 17",
+            "injuryType": "Hand",
+            "injuryStatus": "Expected to be out until at least Dec 3"
+        }
+    },
+    {
+        "teamName": "Oklahoma City",
+        "teamInjuredPlayer": {
+            "Name": "N. Topic",
+            "Position": "PG",
+            "lastUpdated": "Thu, Jun 27",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Jul 1"
+        }
+    },
+    {
+        "teamName": "Orlando",
+        "teamInjuredPlayer": {
+            "Name": "W. Carter Jr.",
+            "Position": "C",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Orlando",
+        "teamInjuredPlayer": {
+            "Name": "P. Banchero",
+            "Position": "PF",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Oblique",
+            "injuryStatus": "Expected to be out until at least Dec 8"
+        }
+    },
+    {
+        "teamName": "Philadelphia",
+        "teamInjuredPlayer": {
+            "Name": "J. Embiid",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Philadelphia",
+        "teamInjuredPlayer": {
+            "Name": "P. George",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Phoenix",
+        "teamInjuredPlayer": {
+            "Name": "B. Beal",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Elbow",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Portland",
+        "teamInjuredPlayer": {
+            "Name": "S. Sharpe",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Shoulder",
+            "injuryStatus": "Expected to be out until at least Nov 7"
+        }
+    },
+    {
+        "teamName": "Portland",
+        "teamInjuredPlayer": {
+            "Name": "R. Williams III",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Portland",
+        "teamInjuredPlayer": {
+            "Name": "M. Thybulle",
+            "Position": "SF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 7"
+        }
+    },
+    {
+        "teamName": "Sacramento",
+        "teamInjuredPlayer": {
+            "Name": "K. Huerter",
+            "Position": "SG",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Sacramento",
+        "teamInjuredPlayer": {
+            "Name": "O. Robinson",
+            "Position": "C",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "Sacramento",
+        "teamInjuredPlayer": {
+            "Name": "D. Carter",
+            "Position": "SG",
+            "lastUpdated": "Thu, Oct 3",
+            "injuryType": "Shoulder",
+            "injuryStatus": "Expected to be out until at least Jan 10"
+        }
+    },
+    {
+        "teamName": "San Antonio",
+        "teamInjuredPlayer": {
+            "Name": "D. Vassell",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Foot",
+            "injuryStatus": "Expected to be out until at least Nov 6"
+        }
+    },
+    {
+        "teamName": "San Antonio",
+        "teamInjuredPlayer": {
+            "Name": "T. Jones",
+            "Position": "PG",
+            "lastUpdated": "Sat, Oct 26",
+            "injuryType": "Ankle",
+            "injuryStatus": "Expected to be out until at least Nov 11"
+        }
+    },
+    {
+        "teamName": "Toronto",
+        "teamInjuredPlayer": {
+            "Name": "B. Brown",
+            "Position": "SG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Nov 30"
+        }
+    },
+    {
+        "teamName": "Toronto",
+        "teamInjuredPlayer": {
+            "Name": "I. Quickley",
+            "Position": "PG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Pelvis",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Toronto",
+        "teamInjuredPlayer": {
+            "Name": "K. Olynyk",
+            "Position": "PF",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Back",
+            "injuryStatus": "Expected to be out until at least Nov 16"
+        }
+    },
+    {
+        "teamName": "Toronto",
+        "teamInjuredPlayer": {
+            "Name": "S. Barnes",
+            "Position": "SG",
+            "lastUpdated": "Wed, Oct 30",
+            "injuryType": "Orbital",
+            "injuryStatus": "Expected to be out until at least Nov 21"
+        }
+    },
+    {
+        "teamName": "Utah",
+        "teamInjuredPlayer": {
+            "Name": "L. Markkanen",
+            "Position": "PF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Back",
+            "injuryStatus": "Game Time Decision"
+        }
+    },
+    {
+        "teamName": "Utah",
+        "teamInjuredPlayer": {
+            "Name": "I. Collier",
+            "Position": "PG",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Hamstring",
+            "injuryStatus": "Expected to be out until at least Nov 7"
+        }
+    },
+    {
+        "teamName": "Utah",
+        "teamInjuredPlayer": {
+            "Name": "J. Clarkson",
+            "Position": "PG",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Heel",
+            "injuryStatus": "Expected to be out until at least Nov 9"
+        }
+    },
+    {
+        "teamName": "Utah",
+        "teamInjuredPlayer": {
+            "Name": "T. Hendricks",
+            "Position": "PF",
+            "lastUpdated": "Fri, Nov 1",
+            "injuryType": "Lower Leg",
+            "injuryStatus": "Out for the season"
+        }
+    },
+    {
+        "teamName": "Washington",
+        "teamInjuredPlayer": {
+            "Name": "M. Bagley III",
+            "Position": "C",
+            "lastUpdated": "Mon, Nov 4",
+            "injuryType": "Illness",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Washington",
+        "teamInjuredPlayer": {
+            "Name": "K. Kuzma",
+            "Position": "PF",
+            "lastUpdated": "Sun, Nov 3",
+            "injuryType": "Groin",
+            "injuryStatus": "Expected to be out until at least Nov 8"
+        }
+    },
+    {
+        "teamName": "Washington",
+        "teamInjuredPlayer": {
+            "Name": "S. Bey",
+            "Position": "SF",
+            "lastUpdated": "Fri, Oct 25",
+            "injuryType": "Knee",
+            "injuryStatus": "Expected to be out until at least Jan 12"
+        }
+    },
+    {
+        "teamName": "Washington",
+        "teamInjuredPlayer": {
+            "Name": "M. Brogdon",
+            "Position": "PG",
+            "lastUpdated": "Tue, Oct 8",
+            "injuryType": "Thumb",
+            "injuryStatus": "Expected to be out until at least Nov 10"
+        }
+    }
+]

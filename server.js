@@ -1,10 +1,6 @@
-require('dotenv').config(); // for environment variables
-const scrapper = require("./scrapper/scrape");
+const {createInjuryJson} = require("./helpers/data");
 
-async function test(){
-   console.log( await scrapper());
-}
 
-test();
+createInjuryJson();
 
-// Above is a async test function to test our scrapper function from the scrape script.
+// Above imports our fucntion to create our json file with data in it
