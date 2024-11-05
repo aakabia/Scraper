@@ -1,4 +1,3 @@
-require("dotenv").config(); // for environment variables
 const scrapper = require("../scrapper/scrape");
 const injuryScrapper = require("../scrapper/nbaInjuries");
 const fs = require("fs");
