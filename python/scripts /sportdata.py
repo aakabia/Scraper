@@ -8,7 +8,7 @@ import os
 # os and json help us write data to a file 
 
 
-json_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'json','active_players.json')
+json_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'json','active_players.json')
 
 # Above, uses os to get the absolute path of furrent directory and join it to the path of our file.
 

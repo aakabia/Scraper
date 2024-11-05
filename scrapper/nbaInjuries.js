@@ -4,6 +4,13 @@ const puppeteer = require("puppeteer"); // use puppeteer module
 async function injuryScrapper() {
   const browser = await puppeteer.launch({ headless: false }); // headless: false allows you to see the browser
   const page = await browser.newPage();
+
+  await page.setViewport({
+    width: 1920,  // Adjust this width as needed
+    height: 1080  // Adjust this height as needed
+  });
+
+
   await page.goto(process.env.INJURIESURL);
 
   await page.waitForSelector("div > .TableBaseWrapper");
@@ -75,7 +82,7 @@ async function injuryScrapper() {
         let injuryStatusData;
 
         let playerNameWrapper = element.firstElementChild;
-        let playerNameCell = playerNameWrapper.firstElementChild;
+        let playerNameCell = playerNameWrapper.children[1];
         playerNameData = playerNameCell.firstElementChild.textContent.trim();
         playerPositionData = element.children[1].textContent
           .trim()
