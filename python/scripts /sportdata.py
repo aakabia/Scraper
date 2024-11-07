@@ -294,9 +294,6 @@ def get_player_game_logs(year):
 
 
 
-
-
-
 """player_info = commonplayerinfo.CommonPlayerInfo(player_id='203999')
 player_dict = player_info.get_dict()
 common_info = player_dict['resultSets'][0]  # Access the first dataset
