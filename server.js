@@ -1,15 +1,11 @@
 require("dotenv").config();
-const {createInjuryJson} = require("./helpers/data");
-const getTeamsDataByYear = require("./scrapper/nbaTeams")
+const {createInjuryJson, createCsvForYear} = require("./helpers/data");
 
 
-//createInjuryJson();
+createCsvForYear("2025")
 
-async function test(){
-    console.log(await getTeamsDataByYear("2024"))
-}
 
-test();
+
 
 // fix dadiet player name in json data 
 // Also Moussa Diabat
