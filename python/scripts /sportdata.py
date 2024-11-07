@@ -2,6 +2,7 @@ from nba_api.stats.endpoints import playercareerstats
 from nba_api.stats.static import players
 from nba_api.stats.endpoints import commonplayerinfo
 from nba_api.stats.endpoints import playergamelog
+from nba_api.stats.static import teams
 import pandas as pd
 import json
 import os
@@ -55,7 +56,6 @@ def get_player_Basic_Info():
     except Exception as e:
         print(f"An error occurred: {e}")
         raise
-
 
 
 
@@ -167,6 +167,117 @@ def get_player_career_stats():
 
 
 
+def get_player_game_logs(year):
+    """
+    Fetches and saves the last five game logs for all active NBA players for a given season.
+
+    This function retrieves game logs for each active player using the NBA API and extracts 
+    the last five games played, sorted by date in descending order. The data is then saved 
+    into a CSV file.
+
+    Parameters:
+    year (string): The NBA season year (e.g., 2024 for the 2023-2024 season).
+
+    Function Workflow:
+    - Creates or appends to a CSV file in the 'csv/performance' directory.
+    - Retrieves a list of active NBA players.
+    - Iterates through each player and fetches their game logs.
+    - Sorts the logs by game date and selects the last five games.
+    - Handles potential request timeouts and retries up to three times for each player.
+    - Saves the filtered game data into a CSV file.
+
+    Raises:
+    Exception: Re-raises any unexpected errors for further handling.
+
+    Notes:
+    - The 'GAME_DATE' column is formatted to the standard 'YYYY-MM-DD'.
+    - The CSV includes the player's name and game log details.
+
+    CSV File Structure:
+    - The output CSV will be named 'players_last_five_{year}.csv' and saved in the 
+      'csv/performance' directory.
+
+    Example:
+    >>> get_player_game_logs('2024')
+    Saves a CSV file containing the last five games of active NBA players for the 2023-2024 season.
+
+    """
+
+
+
+
+    try:
+
+        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','performance',f'players_last_five_{year}.csv')
+        os.makedirs(os.path.dirname(csv_directory), exist_ok=True)
+        # Above is the path we make for our data file 
+
+        file_exists = os.path.exists(csv_directory)
+        # check if the file exists, use this for headers in csv file 
+
+
+
+        player_dict = players.get_players()
+
+        if not player_dict:
+            print("No players returned from API")
+            return
+        
+        # Above checks if we recieved data from API 
+
+        active_player_dict = [player for player in player_dict if player['is_active']]
+        # Above filters active players to a new list 
+
+        
+
+        for player in active_player_dict:
+            player_id = player["id"]
+
+            retries = 3 
+
+            for attempt in range (retries):
+                try:
+   
+                   
+                    game_log = playergamelog.PlayerGameLog(player_id=player_id, season=year, timeout=45)
+                    game_log_df = game_log.get_data_frames()[0]
+
+                    game_log_df['player_name'] = player['full_name']
+                    game_log_df['GAME_DATE'] = pd.to_datetime(game_log_df['GAME_DATE'], format='%b %d, %Y')
+
+                    last_five_games = game_log_df.sort_values(by='GAME_DATE', ascending=False).head(5)
+
+                    # Above, uses  playergamelog.PlayerGameLog to get the last five games for a player 
+                    # Also it organizes the games by date YYY-MM-DD
+
+                   
+
+
+                    with open(csv_directory, 'a', newline='') as f:
+                        last_five_games.to_csv(f, header= not file_exists, index=False)
+                        file_exists = True
+                        f.write("\n")
+                        print(f"{year} playoff gamelog saved for player {player['full_name']}")
+                        
+                    break
+
+
+                except requests.exceptions.ReadTimeout:
+                    if attempt < retries - 1:
+                        print(f"Timeout occurred for player {player['full_name']}. Retrying... ({attempt + 1}/{retries})")
+                        time.sleep(10)  # Wait for 10 seconds before retrying
+                    else:
+                        print(f"Max retries reached for player {player['full_name']}. Skipping.")
+
+                except Exception as e:
+                    print(f"An error occurred for player {player['full_name']}: {e}")
+                    break  # Break out of the retry loop if any other error occurs
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        raise
+
+    print(f"All player logs for {year}  have been saved to {csv_directory}")
 
 
 
@@ -177,43 +288,12 @@ def get_player_career_stats():
 
 
 
-#player_id = '1628369'  # Example: Jayson Tatum's Player ID
-#season = '2022-23'     # NBA season
-#player_id_2 ='203500'
-
-# Retrieve the player's game logs
-#game_log = playergamelog.PlayerGameLog(player_id=player_id, season=season)
-
-#game_log_df = game_log.get_data_frames()[0]
-
-# Display the DataFrame
 
 
 
 
 
 
-
-
-
-
-
-
-# Example function to get game logs for a player over multiple seasons
-"""def get_player_game_logs(player_id, start_season, end_season):
-    game_logs = []
-    for season in range(start_season, end_season + 1):
-        game_log = playergamelog.PlayerGameLog(player_id=player_id, season=season).get_data_frames()[0]
-        game_logs.append(game_log)
-    return game_logs"""
-
-#career = playercareerstats.PlayerCareerStats(player_id='203999') 
-
-
-
-
-
-#print (career.get_data_frames()[0])
 
 
 
