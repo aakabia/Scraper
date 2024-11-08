@@ -2,7 +2,7 @@ require("dotenv").config();
 const {createInjuryJson, createCsvForYear} = require("./helpers/data");
 
 
-createCsvForYear("2025")
+//createCsvForYear("2025")
 
 
 
