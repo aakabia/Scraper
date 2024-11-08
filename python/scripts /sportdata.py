@@ -2,7 +2,6 @@ from nba_api.stats.endpoints import playercareerstats
 from nba_api.stats.static import players
 from nba_api.stats.endpoints import commonplayerinfo
 from nba_api.stats.endpoints import playergamelog
-from nba_api.stats.static import teams
 import pandas as pd
 import json
 import os
@@ -14,48 +13,6 @@ import requests
 # time for  adding delays (e.g., time.sleep) between retries in case of timeouts (not responsible for retry just delays execution)
 # requests for handeling timeouts from  HTTP requests to fetch player career stats from an external API.
 # pandas to use data frames and more
-
-def get_player_Basic_Info():
-
-    """
-    Retrieves a list of active NBA players and saves their basic information 
-    to a JSON file in the specified directory.
-    """
-
-
-    json_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'json','active_players.json')
-
-    # Above, uses os to get the absolute path of furrent directory and join it to the path of our file.
-
-    try:
-        os.makedirs(os.path.dirname(json_directory), exist_ok=True)
-
-        # Above, checks if the directore exists and if it does we do nothing but if it doesnt we make it.
-
-
-        player_dict = players.get_players()
-
-        # Above, uses nba API to get all players from the nba 
-
-        active_players =[]
-
-        for player in player_dict: 
-            if player['is_active'] == True:
-             active_players.append(player)
-
-        # Above, we loop through our player_dict list and only append active players to our active_players =[] list 
-
-
-        with open(json_directory, "w") as f:
-            json.dump(active_players, f, indent=4) 
-
-
-        # Above, write to a file path "json_directory" with "with open" and "json.dump".
-        # "f represents the file , active_players represents the item we want to write and indent=4 allows for spacing betwwen dictionaries "
-        # "w" stands for writing
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        raise
 
 
 
@@ -282,6 +239,98 @@ def get_player_game_logs(year):
 
 
 
+def getPlayerInfo():
+
+    try:
+        json_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'json','active_players.json')
+        os.makedirs(os.path.dirname(json_directory), exist_ok=True)
+        # Above is the path we make for our data file 
+
+       
+        player_dict = players.get_players()
+
+        if not player_dict:
+            print("No players returned from API")
+            return
+        
+        # Above checks if we recieved data from API 
+
+        active_player_dict = [player for player in player_dict if player['is_active']]
+        # Above filters active players to a new list 
+
+        results = []
+
+        for player in active_player_dict:
+            player_id = player["id"]
+
+            retries = 3 
+
+            for attempt in range (retries):
+                try:
+                    player_info = commonplayerinfo.CommonPlayerInfo(player_id=player_id ,timeout=45)
+
+                    # Retrieve the data as a dictionary
+                    player_dict = player_info.get_dict()
+
+                    # Access the first dataset from 'resultSets'
+                    common_info = player_dict['resultSets'][0]
+
+                    # Extract the player's name, assuming it's in the 4th column of the first row
+
+                    player_height = common_info['rowSet'][0][11]
+
+                    player_weight = common_info['rowSet'][0][12]
+                    player_position = common_info['rowSet'][0][15]
+                    player_team_name = common_info['rowSet'][0][19]
+                    player_team_abr = common_info['rowSet'][0][20]
+                    
+
+                    if not player_height and not player_weight and not player_position and not player_team_name and not player_team_abr:
+                        break
+
+                    player_dic = {
+                        **player,
+                        "player_height":player_height,
+                        "player_weight":player_weight,
+                        "player_position":player_position,
+                        "player_team_name":player_team_name,
+                        "player_team_abr":player_team_abr
+
+                    }
+                   
+                    results.append(player_dic)
+                    print(f" appended {player['full_name']} dict to results array!")
+                   
+                    break
+
+
+                except requests.exceptions.ReadTimeout:
+                    if attempt < retries - 1:
+                        print(f"Timeout occurred for player {player['full_name']}. Retrying... ({attempt + 1}/{retries})")
+                        time.sleep(15)  # Wait for 10 seconds before retrying
+                    else:
+                        print(f"Max retries reached for player {player['full_name']}. Skipping.")
+
+                except Exception as e:
+                    print(f"An error occurred for player {player['full_name']}: {e}")
+                    break  # Break out of the retry loop if any other error occurs
+
+
+
+
+        with open(json_directory, "w") as f:
+            json.dump(results, f, indent=4) 
+
+
+        print(f"All player info has been saved to {json_directory}")
+
+
+
+
+    
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        raise
 
 
 
@@ -292,11 +341,4 @@ def get_player_game_logs(year):
 
 
 
-
-
-"""player_info = commonplayerinfo.CommonPlayerInfo(player_id='203999')
-player_dict = player_info.get_dict()
-common_info = player_dict['resultSets'][0]  # Access the first dataset
-player_name = common_info['rowSet'][0][3] 
-print(player_name)"""
 
