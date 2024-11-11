@@ -55,7 +55,7 @@ def get_player_career_stats():
         # Above filters active players to a new list 
 
 
-        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','active_players_carrer_stats.csv')
+        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','active_players_carrer_stats_2024.csv')
         os.makedirs(os.path.dirname(csv_directory), exist_ok=True)
         # Above is the path we make for our data file 
 
@@ -82,13 +82,21 @@ def get_player_career_stats():
 
                     
                     stats_df['player_name'] = player['full_name']
+                    season_stats = stats_df[stats_df['SEASON_ID'] == '2024-25']
+
+                    if season_stats.empty:
+                        print(f"No stats available for player {player['full_name']} in season 2024-25. Skipping...")
+                        time.sleep(2)  
+                        break
 
 
                     with open(csv_directory, 'a', newline='') as f:
-                        stats_df.to_csv(f, header= not file_exists, index=False)
+                        season_stats.to_csv(f, header= not file_exists, index=False)
                         file_exists = True
                         f.write("\n")  # Add a blank line for separation
                         print(f"Stats saved for player {player['full_name']}")
+
+                    time.sleep(2)
                     break
                 # try block that calls the the API, creats a DataFrame for each player entry and appends that Dataframe to our file
                 # sets file_exists to true  so we only recieve our headers once
@@ -214,7 +222,9 @@ def get_player_game_logs(year):
                         last_five_games.to_csv(f, header= not file_exists, index=False)
                         file_exists = True
                         f.write("\n")
-                        print(f"{year} playoff gamelog saved for player {player['full_name']}")
+                        print(f"{year} player gamelog saved for player {player['full_name']}")
+
+                    time.sleep(3)
                         
                     break
 
@@ -334,7 +344,7 @@ def getPlayerInfo():
 
 
 
-
+get_player_career_stats()
 
 
 
