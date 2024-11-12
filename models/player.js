@@ -1,5 +1,6 @@
 const { Sequelize, DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
+// Above, imports our connection and our tools for using sequalize
 
 class Player extends Model {}
 
@@ -15,10 +16,15 @@ Player.init(
 
     player_id: {
       type: DataTypes.INTEGER,
+      unique: true,
       allowNull: false,
     },
 
     full_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    full_name_cleaned: {
       type: DataTypes.STRING,
       allowNull: false,
     },

@@ -1,8 +1,9 @@
+const Injured = require("./injured");
 const Player = require("./player");
 
 
-// Above, we import the model
+// Above, we import the models
 
-module.exports = { Player };
+module.exports = { Player,Injured };
 
-// Above we eport the model.
+// Above we eport the models.
