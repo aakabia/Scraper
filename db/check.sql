@@ -1,4 +1,4 @@
 SELECT *
 FROM "Player"
-JOIN "Injured" ON "Player"."player_id" = "Injured"."player_id"
-WHERE "Injured"."injured" = TRUE;
+JOIN "Current_Season" ON "Player"."player_id" = "Current_Season"."player_id"
+WHERE "Player"."player_id"  = 2544;

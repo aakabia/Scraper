@@ -344,7 +344,7 @@ def getPlayerInfo():
 
 
 
-get_player_career_stats()
+
 
 
 
