@@ -134,7 +134,7 @@ def get_player_career_stats():
 
 def get_player_game_logs(year):
     """
-    Fetches and saves the last five game logs for all active NBA players for a given season.
+    Fetches and saves the "year" game logs for all active NBA players for a given season.
 
     This function retrieves game logs for each active player using the NBA API and extracts 
     the last five games played, sorted by date in descending order. The data is then saved 
@@ -173,7 +173,7 @@ def get_player_game_logs(year):
 
     try:
 
-        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','performance',f'players_last_five_{year}.csv')
+        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','performance',f'players_{year}_stats.csv')
         os.makedirs(os.path.dirname(csv_directory), exist_ok=True)
         # Above is the path we make for our data file 
 
@@ -210,10 +210,15 @@ def get_player_game_logs(year):
                     game_log_df['player_name'] = player['full_name']
                     game_log_df['GAME_DATE'] = pd.to_datetime(game_log_df['GAME_DATE'], format='%b %d, %Y')
 
-                    last_five_games = game_log_df.sort_values(by='GAME_DATE', ascending=False).head(5)
+                    last_five_games = game_log_df.sort_values(by='GAME_DATE', ascending=False)
 
                     # Above, uses  playergamelog.PlayerGameLog to get the last five games for a player 
                     # Also it organizes the games by date YYY-MM-DD
+
+                    if last_five_games.empty:
+                        print(f"No stats available for player {player['full_name']} in season 2024-25. Skipping...")
+                        time.sleep(2)  
+                        break
 
                    
 
@@ -224,7 +229,7 @@ def get_player_game_logs(year):
                         f.write("\n")
                         print(f"{year} player gamelog saved for player {player['full_name']}")
 
-                    time.sleep(3)
+                    time.sleep(2)
                         
                     break
 
@@ -344,7 +349,7 @@ def getPlayerInfo():
 
 
 
-
+get_player_game_logs("2024")
 
 
 
