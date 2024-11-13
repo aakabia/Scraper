@@ -44,7 +44,7 @@ async function createCsvForYear(year) {
   }
 
 
-  const directoryPath = path.join(__dirname, "..", "csv", "teams", "nba","stats2025");
+  const directoryPath = path.join(__dirname, "..", "csv", "teams", "nba",`stats${year}`);
 
   if (!fs.existsSync(directoryPath)) {
     fs.mkdirSync(directoryPath, { recursive: true });

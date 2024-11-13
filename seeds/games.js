@@ -1,11 +1,10 @@
 const fs = require("fs/promises");
-const {  CurrentSeasonStats } = require("../models");
-
+const {  Games } = require("../models");
 const Papa = require("papaparse");
 
-// Above, import our nodel and papaparse to parse csv file 
+// Above, we import our model , fs, and papaparse to read our csv files 
 
-async function SeedCurrentStats(filePath) {
+async function SeedGameStats(filePath,bool) {
   try {
     
     console.log(`Reading file from: ${filePath}`);
@@ -13,11 +12,13 @@ async function SeedCurrentStats(filePath) {
     const data = await fs.readFile(filePath, "utf8");
     console.log("CSV data read successfully.");
 
+    // Above, uses fs to read the file
+
     let results= [];
   
     Papa.parse(data, {
-      header: true, // Treat first row as header
-      dynamicTyping: true, // Automatically convert values to appropriate types
+      header: true, 
+      dynamicTyping: true, 
       skipEmptyLines: true,
       complete: (result) => {
         //console.log("Parsed CSV:", result.data); // Log parsed data
@@ -25,16 +26,16 @@ async function SeedCurrentStats(filePath) {
         // Process each row here
         result.data.forEach((row) => {
           
-          // Insert into database or any other processing
+          
           let newRowObject ={
-            player_id: row.PLAYER_ID, // Replace with the correct column mappings
+            player_id: row.Player_ID, 
+            playoff_game: bool,
             player_name: row.player_name,
-            season: row.SEASON_ID,
-            team_abbr: row.TEAM_ABBREVIATION,
-            player_age: parseInt(row.PLAYER_AGE, 10),
-            games_played: parseInt(row.GP, 10),
-            games_started: parseInt(row.GS, 10),
-            minutes_played: parseFloat(row.MIN),
+            season_id: row.SEASON_ID,
+            game_date: row.GAME_DATE,
+            matchup: row.MATCHUP,
+            win_or_loss: row.WL,
+            minutes_played: parseInt(row.MIN,10),
             field_goals_made: parseInt(row.FGM, 10),
             field_goals_attempted: parseInt(row.FGA, 10),
             field_goals_percentage: parseFloat(row.FG_PCT),
@@ -53,9 +54,12 @@ async function SeedCurrentStats(filePath) {
             turn_overs: parseInt(row.TOV, 10),
             personal_fouls: parseInt(row.PF, 10),
             points: parseInt(row.PTS, 10),
+            plus_minus: parseInt(row.PLUS_MINUS, 10),
           }
 
           results.push(newRowObject)
+
+          // Above uses papaparse and a for loop to a create a object for each key from our papaparse data.
         });
       },
       error: (err) => {
@@ -63,17 +67,17 @@ async function SeedCurrentStats(filePath) {
       },
     });
 
-    // Above uses papaparse and a for loop to a create a object for each key from our papaparse data.
-
+    
     
 
-    await CurrentSeasonStats.bulkCreate(results);
-    console.log("DATABASE Seeded With Players Season Stats 🌱");
+    await Games.bulkCreate(results);
+    console.log("DATABASE Seeded With Players Game Stats 🌱");
+    // Bulk create our entries from results array 
    
   } catch (error) {
-    console.error("Error Seeding Players Current Season to db:", error);
+    console.error("Error Seeding Players Games to db:", error);
     throw error;
   }
 }
 
-module.exports = { SeedCurrentStats };
+module.exports = { SeedGameStats };
