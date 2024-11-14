@@ -1,13 +1,14 @@
 require("dotenv").config();
 const sequelize = require("./config/connection");
+const {createCsvForYear} = require("./helpers/data")
 
 
 
-sequelize.sync({ force: false }).then(() => {
+/*sequelize.sync({ force: false }).then(() => {
    console.log("connected to sports_db")
-});
+});*/
 
-
+//createCsvForYear("2023");
 
 
 

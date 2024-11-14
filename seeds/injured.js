@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { Player, Injured } = require("../models");
 
-async function SeedInjuredPlayers() {
+async function SeedInjuredPlayers(filePath) {
   try {
     const players = await Player.findAll(); // This will fetch all rows from the Player table
 
@@ -15,14 +15,14 @@ async function SeedInjuredPlayers() {
     const playersCLeaned = players.map((player) => player.get({ plain: true }));
 
     const rawData = fs.readFileSync(
-      "/Users/akabia/projects/Scraper/json/injured_players.json",
+      filePath,
       "utf-8"
     );
     const jsonData = JSON.parse(rawData);
 
     if (!jsonData) {
       console.log(
-        "No Json data from: /Users/akabia/projects/Scraper/json/injured_players.json "
+        `No Json data from:${filePath} `
       );
       return;
     }
