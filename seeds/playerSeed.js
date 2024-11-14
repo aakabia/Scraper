@@ -1,17 +1,17 @@
 const fs = require("fs");
 const { Player } = require("../models");
 
-async function SeedPlayers() {
+async function SeedPlayers(filePath) {
   try {
     const rawData = fs.readFileSync(
-      "/Users/akabia/projects/Scraper/json/active_players.json",
+      filePath,
       "utf-8"
     );
     const jsonData = JSON.parse(rawData);
 
     if (!jsonData) {
       console.log(
-        "No Json data from: /Users/akabia/projects/Scraper/json/active_players.json "
+        `No Json data from: ${filePath}`
       );
       return;
     }

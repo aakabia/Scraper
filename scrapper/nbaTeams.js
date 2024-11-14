@@ -69,7 +69,7 @@ async function getTeamsDataByYear(year) {
     await page.waitForSelector("#csv_totals-team");
     await page.waitForSelector("#csv_per_poss-team");
     await page.waitForSelector("#csv_advanced-team");
-    await page.waitForSelector("#csv_shooting-team");
+    //await page.waitForSelector("#csv_shooting-team");
 
     // Above waits for the page to load these selectors once the button is clicked 
 
@@ -78,7 +78,7 @@ async function getTeamsDataByYear(year) {
       const totalStatsPre = document.querySelector("#csv_totals-team");
       const per100PosPre = document.querySelector("#csv_per_poss-team");
       const advanceStatsPre = document.querySelector("#csv_advanced-team");
-      const teamShootingStatsPre = document.querySelector("#csv_shooting-team");
+      //const teamShootingStatsPre = document.querySelector("#csv_shooting-team");
 
       // Get the text content from our CSV elements
       const perGameCSV = perGamePre ? perGamePre.textContent : null;
@@ -87,9 +87,9 @@ async function getTeamsDataByYear(year) {
       const advancedStatsCSV = advanceStatsPre
         ? advanceStatsPre.textContent
         : null;
-      const teamShootingCSV = teamShootingStatsPre
+      /*const teamShootingCSV = teamShootingStatsPre
         ? teamShootingStatsPre.textContent
-        : null;
+        : null;*/
       // get the text content from our csv elements
 
       return {
@@ -97,7 +97,7 @@ async function getTeamsDataByYear(year) {
         totalStatsCSV,
         per100PosCSV,
         advancedStatsCSV,
-        teamShootingCSV,
+        //teamShootingCSV,
       };
       // return object with our csv content
     });
@@ -109,9 +109,20 @@ async function getTeamsDataByYear(year) {
         // Step 2: Extract the data starting from "Rk"
         let cleanedData = rawData.slice(headerIndex).trim();
 
-        csvObjects[key] = cleanedData;
+        let rows = cleanedData.split('\n');
+
+        let filteredRows = rows.filter(row => !row.includes('League Average'));
+
+        let cleanedCSV = filteredRows.join('\n');
+
+        // Above, clears a certain row out of our data 
+
+
+        csvObjects[key] = cleanedCSV;
 
     }
+
+    //console.log(csvObjects);
 
 
     await new Promise((resolve) => setTimeout(resolve, 10000));

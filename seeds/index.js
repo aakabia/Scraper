@@ -3,23 +3,23 @@ const { SeedPlayers } = require("./playerSeed");
 const { SeedInjuredPlayers } = require("./injured");
 const { SeedCurrentStats } = require("./currentSeason");
 const { SeedGameStats } = require("./games");
+const { SeedTeamStats } = require("./teams");
+
 
 // Above, imports our functions 
 
-const currentSeason =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/players/active_players_carrer_stats_2024.csv`;
-const pastSeasons =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/players/active_players_carrer_stats.csv`;
-const currentYearGames =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/performance/players_2024_stats.csv`;
-const year2023Games =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/gamelogs/active_players_logs_2023.csv`;
-const year2022Games =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/gamelogs/active_players_logs_2022.csv`;
-const playOff2023 =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/playofflogs/players_playoffs_logs_2023.csv`;
-const playOff2022 =
-  `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/playofflogs/players_playoffs_logs_2022.csv`;
+const currentSeason =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/players/active_players_carrer_stats_2024.csv`;
+const pastSeasons =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/players/active_players_carrer_stats.csv`;
+const currentYearGames =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/performance/players_2024_stats.csv`;
+const year2023Games =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/gamelogs/active_players_logs_2023.csv`;
+const year2022Games =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/gamelogs/active_players_logs_2022.csv`;
+const playOff2023 =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/playofflogs/players_playoffs_logs_2023.csv`;
+const playOff2022 =`/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/playofflogs/players_playoffs_logs_2022.csv`;
+const injuredPlayers =`/Users/${process.env.DEVICE_USER}/projects/Scraper/json/injured_players.json`;
+const activePlayers = `/Users/${process.env.DEVICE_USER}/projects/Scraper/json/active_players.json`
+const totalTeamSeasonStats = `/Users/${process.env.DEVICE_USER}/projects/Scraper/csv/teams/nba/stats2025/totalStatsCSV_2025.csv`
+
+
 
 // Above creates pathes to different csv files
 
@@ -29,10 +29,10 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true });
     console.log("\n----- DATABASE SYNCED -----\n");
 
-    await SeedPlayers();
+    await SeedPlayers(activePlayers);
     console.log("\n----- PLAYERS SEEDED -----\n");
 
-    await SeedInjuredPlayers();
+    await SeedInjuredPlayers(injuredPlayers);
     console.log("\n----- INJURED PLAYERS SEEDED -----\n");
 
     await SeedCurrentStats(currentSeason);
@@ -59,6 +59,12 @@ const seedDatabase = async () => {
 
     await SeedGameStats(playOff2022, true);
     console.log("\n----- Player Playoff 2022 Year Game Stats Seeded -----\n");
+
+    await SeedTeamStats(totalTeamSeasonStats);
+    console.log("\n----- Teams Names Seeded -----\n");
+
+
+
   } catch (error) {
     console.error("An error occurred while seeding the database:", error);
   } finally {
