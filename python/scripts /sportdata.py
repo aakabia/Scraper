@@ -55,12 +55,23 @@ def get_player_career_stats():
         # Above filters active players to a new list 
 
 
-        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','active_players_carrer_stats_2024.csv')
+        csv_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csv','players','active_players_carrer_stats_2024.csv')
         os.makedirs(os.path.dirname(csv_directory), exist_ok=True)
         # Above is the path we make for our data file 
 
         file_exists = os.path.exists(csv_directory)
         # check if the file exists, use this for headers in csv file 
+
+
+
+        if os.path.exists(csv_directory):
+            os.remove(csv_directory)  # Delete the file if it exists
+            print(f"{csv_directory} has been deleted and recreated.")
+            file_exists = False
+        else:
+            print(f"{csv_directory} is being created.")
+            file_exists = False 
+
 
 
         for player in active_player_ids_dict:
@@ -192,6 +203,14 @@ def get_player_game_logs(year):
 
         active_player_dict = [player for player in player_dict if player['is_active']]
         # Above filters active players to a new list 
+
+        if os.path.exists(csv_directory):
+            os.remove(csv_directory)  # Delete the file if it exists
+            print(f"{csv_directory} has been deleted and recreated.")
+            file_exists = False 
+        else:
+            print(f"{csv_directory} is being created.")
+            file_exists = False
 
         
 
@@ -348,7 +367,7 @@ def getPlayerInfo():
         raise
 
 
-
+#get_player_career_stats()
 get_player_game_logs("2024")
 
 
