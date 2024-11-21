@@ -1,6 +1,6 @@
 require("dotenv").config();
 const sequelize = require("./config/connection");
-const {createCsvForYear} = require("./helpers/data")
+const {createCsvForYear, createInjuryJson} = require("./helpers/data")
 
 
 
@@ -8,8 +8,8 @@ const {createCsvForYear} = require("./helpers/data")
    console.log("connected to sports_db")
 });*/
 
-//createCsvForYear("2023");
-
+createCsvForYear("2025");
+//createInjuryJson()
 
 
 
