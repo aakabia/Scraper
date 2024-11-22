@@ -27,6 +27,7 @@ CurrentSeasonStats.init(
         allowNull: false,
     },
 
+
     season: {
         type: DataTypes.STRING,
         allowNull: false,

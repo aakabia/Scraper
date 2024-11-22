@@ -4,7 +4,7 @@ const Papa = require("papaparse");
 
 // Above, we import our model , fs, and papaparse to read our csv files 
 
-async function SeedGameStats(filePath,bool) {
+async function SeedGameStats(filePath,bool,statYear) {
   try {
     
     console.log(`Reading file from: ${filePath}`);
@@ -30,10 +30,12 @@ async function SeedGameStats(filePath,bool) {
           let newRowObject ={
             player_id: row.Player_ID, 
             playoff_game: bool,
+            stat_year: statYear,
             player_name: row.player_name,
             season_id: row.SEASON_ID,
             game_date: row.GAME_DATE,
             matchup: row.MATCHUP,
+            home_away: row.MATCHUP.includes("@") ? 0 : 1,
             win_or_loss: row.WL,
             minutes_played: parseInt(row.MIN,10),
             field_goals_made: parseInt(row.FGM, 10),

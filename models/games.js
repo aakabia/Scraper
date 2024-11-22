@@ -28,6 +28,11 @@ Games.init(
         allowNull: false,
     },
 
+    stat_year: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
 
     player_name:{
         type: DataTypes.STRING,
@@ -40,13 +45,19 @@ Games.init(
     },
 
     game_date:{
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
         allowNull: false,
     },
     matchup:{
         type: DataTypes.STRING,
         allowNull: false,
     },
+
+    home_away:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+
     win_or_loss:{
         type: DataTypes.STRING,
         allowNull: true,
