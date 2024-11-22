@@ -1,6 +1,7 @@
 const fs = require("fs/promises");
 const { TeamStats, AdvanceTeamStats  } = require("../models");
 const Papa = require("papaparse");
+const {getTeamAbr} = require("../helpers/teamAbr")
 
 
 
@@ -39,6 +40,7 @@ async function SeedTeamSeasonStats(filePath,year,statType) {
           
           let newRowObject ={
             team_name: row.Team.replace(/\*$/, ""), 
+            team_abr: getTeamAbr(row.Team.replace(/\*$/, "")),
             stat_type: statType,
             stat_year: year,
             ranking:row.Rk,
@@ -127,6 +129,7 @@ async function SeedTeamAdvanceStats(filePath,year,statType) {
             
             let newRowObject ={
               team_name: row.Team.replace(/\*$/, ""), 
+              team_abr: getTeamAbr(row.Team.replace(/\*$/, "")),
               stat_type: statType,
               stat_year: year,
               ranking:row.Rk,

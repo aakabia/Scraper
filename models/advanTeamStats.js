@@ -20,6 +20,18 @@ AdvanceTeamStats.init(
       },
     },
 
+    team_abr: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: "Teams",
+        key: "team_abr",
+      },
+    },
+
+
+
+
     stat_type: {
       type: DataTypes.STRING,
       allowNull: false,

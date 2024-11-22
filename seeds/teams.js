@@ -1,6 +1,7 @@
 const fs = require("fs/promises");
 const {  Teams } = require("../models");
 const Papa = require("papaparse");
+const {getTeamAbr} = require("../helpers/teamAbr")
 
 
 
@@ -28,7 +29,9 @@ async function SeedTeamStats(filePath) {
           
           
           let newRowObject ={
-            team_name: row.Team, 
+            team_name: row.Team,
+            team_abr: getTeamAbr(row.Team)
+
             
           }
 

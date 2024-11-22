@@ -20,6 +20,12 @@ Teams.init(
       allowNull: false,
     },
 
+    team_abr: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+    },
+
     
 
  

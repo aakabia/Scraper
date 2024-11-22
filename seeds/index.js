@@ -68,21 +68,21 @@ const seedDatabase = async () => {
     await SeedCurrentStats(pastSeasons);
     console.log("\n----- Player Season Stats For Past Seasons Seeded -----\n");
 
-    await SeedGameStats(currentYearGames, false);
+    await SeedGameStats(currentYearGames, false,"24-2025");
     console.log("\n----- Player Current Year Game Stats Seeded -----\n");
 
     // Pass in path and boolean to use function 
 
-    await SeedGameStats(year2023Games, false);
+    await SeedGameStats(year2023Games, false, "23-2024");
     console.log("\n----- Player 2023 Year Game Stats Seeded -----\n");
 
-    await SeedGameStats(year2022Games, false);
-    console.log("\n----- Player 2024 Year Game Stats Seeded -----\n");
+    await SeedGameStats(year2022Games, false,"22-2023");
+    console.log("\n----- Player 2022 Year Game Stats Seeded -----\n");
 
-    await SeedGameStats(playOff2023, true);
+    await SeedGameStats(playOff2023, true,"23-2024");
     console.log("\n----- Player Playoff 2023 Year Game Stats Seeded -----\n");
 
-    await SeedGameStats(playOff2022, true);
+    await SeedGameStats(playOff2022, true,"22-2023");
     console.log("\n----- Player Playoff 2022 Year Game Stats Seeded -----\n");
 
     // player seed ends 
