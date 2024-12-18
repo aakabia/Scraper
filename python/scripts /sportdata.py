@@ -97,7 +97,7 @@ def get_player_career_stats():
 
                     if season_stats.empty:
                         print(f"No stats available for player {player['full_name']} in season 2024-25. Skipping...")
-                        time.sleep(2)  
+                        time.sleep(4)  
                         break
 
 
@@ -107,7 +107,7 @@ def get_player_career_stats():
                         f.write("\n")  # Add a blank line for separation
                         print(f"Stats saved for player {player['full_name']}")
 
-                    time.sleep(2)
+                    time.sleep(4)
                     break
                 # try block that calls the the API, creats a DataFrame for each player entry and appends that Dataframe to our file
                 # sets file_exists to true  so we only recieve our headers once
@@ -301,7 +301,7 @@ def getPlayerInfo():
 
             for attempt in range (retries):
                 try:
-                    player_info = commonplayerinfo.CommonPlayerInfo(player_id=player_id ,timeout=45)
+                    player_info = commonplayerinfo.CommonPlayerInfo(player_id=player_id ,timeout=30)
 
                     # Retrieve the data as a dictionary
                     player_dict = player_info.get_dict()
@@ -334,6 +334,7 @@ def getPlayerInfo():
                    
                     results.append(player_dic)
                     print(f" appended {player['full_name']} dict to results array!")
+                    time.sleep(2)
                    
                     break
 
@@ -341,7 +342,7 @@ def getPlayerInfo():
                 except requests.exceptions.ReadTimeout:
                     if attempt < retries - 1:
                         print(f"Timeout occurred for player {player['full_name']}. Retrying... ({attempt + 1}/{retries})")
-                        time.sleep(15)  # Wait for 10 seconds before retrying
+                        time.sleep(10)  # Wait for 10 seconds before retrying
                     else:
                         print(f"Max retries reached for player {player['full_name']}. Skipping.")
 
@@ -367,6 +368,7 @@ def getPlayerInfo():
         raise
 
 
+#getPlayerInfo()
 #get_player_career_stats()
 get_player_game_logs("2024")
 
